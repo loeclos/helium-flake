@@ -18,7 +18,7 @@
     {
       packages.${system}.helium = pkgs.callPackage ./pkgs/helium.nix { };
 
-      packages.${system}.default = self.packages.${system}.helium;
+      # packages.${system}.default = self.packages.${system}.helium;
 
       apps.${system}.helium = {
         type = "app";
