@@ -11,7 +11,7 @@ let
   architecture = "x86_64"; # builtins.head (builtins.split "-" pkgs.system);
 
   src = fetchurl {
-    url = "https://github.com/imputnet/helium/releases/download/${version}/helium-${version}${architecture}.AppImage";
+    url = "https://github.com/imputnet/helium/releases/download/${version}/helium-${version}-${architecture}.AppImage";
 
     hash = "1sm21x7zyklq25nvq1cx69g0hncr3k7pakh658xl7d2lm7apycpi";
   };
