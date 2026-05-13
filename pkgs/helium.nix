@@ -13,7 +13,7 @@ let
   src = fetchurl {
     url = "https://github.com/imputnet/helium/releases/download/${version}/helium-${version}-${architecture}.AppImage";
 
-    hash = "";
+    hash = "sha256-+UE+JqQtxbA5szPvAohapXlES21VBOdNsV6Ej1dRRfs=";
   };
 in
 appimageTools.wrapType2 rec {
