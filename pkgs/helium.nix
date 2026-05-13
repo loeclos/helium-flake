@@ -2,13 +2,13 @@
   lib,
   appimageTools,
   fetchurl,
-  pkgs,
+  # pkgs,
 }:
 
 let
   pname = "helium";
   version = "0.12.1.1";
-  architecture = builtins.head (builtins.split "-" pkgs.system);
+  architecture = "x86_64"; # builtins.head (builtins.split "-" pkgs.system);
 
   src = fetchurl {
     url = "https://github.com/imputnet/helium/releases/download/${version}/helium-${version}${architecture}.AppImage";
