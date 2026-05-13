@@ -25,6 +25,6 @@
         program = "${self.packages.${system}.helium}/bin/helium";
       };
 
-      apps.${system}.default = self.apps.${system}.helium;
+      # apps.${system}.default = self.apps.${system}.helium;
     };
 }
