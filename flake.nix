@@ -81,7 +81,12 @@
         devShells.default = mkShell {
           buildInputs = [ statix ];
         };
+
         defaultPackage = helium { };
+
+        packages.default = helium { };
+
+        packages.helium = helium { };
       }
     );
 }
