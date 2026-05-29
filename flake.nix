@@ -10,6 +10,7 @@
       flake = false;
     };
   };
+
   outputs =
     {
       self,
@@ -23,7 +24,7 @@
         pkgs = import nixpkgs {
           inherit system;
         };
-        helium =
+        mkHelium =
           {
             commandLineArgs ? [ ],
             enableFeatures ? [ ],
@@ -77,16 +78,14 @@
       in
       with pkgs;
       {
-        inherit helium;
+        packages = {
+          default = mkHelium { };
+          helium = mkHelium { };
+        };
+
         devShells.default = mkShell {
           buildInputs = [ statix ];
         };
-
-        defaultPackage = helium { };
-
-        packages.default = helium { };
-
-        packages.helium = helium { };
       }
     );
 }
