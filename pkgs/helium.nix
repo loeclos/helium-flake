@@ -7,13 +7,13 @@
 
 let
   pname = "helium";
-  version = "0.12.1.1";
+  version = "0.15.1.1";
   architecture = "x86_64"; # builtins.head (builtins.split "-" pkgs.system);
 
   src = fetchurl {
-    url = "https://github.com/imputnet/helium/releases/download/${version}/helium-${version}-${architecture}.AppImage";
+    url = "https://github.com/imputnet/helium-linux/releases/download/${version}/helium-${version}-${architecture}.AppImage";
 
-    hash = "sha256-+UE+JqQtxbA5szPvAohapXlES21VBOdNsV6Ej1dRRfs=";
+    hash = "sha256-qz3w+nnvBgkpHT3E34dv4DvFuYlyzTAyg9tPYJFWs3o=";
   };
 in
 appimageTools.wrapType2 rec {
